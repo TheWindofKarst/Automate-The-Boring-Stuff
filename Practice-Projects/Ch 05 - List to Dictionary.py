@@ -22,11 +22,8 @@ def display_inventory(inventory):
 # to the value currently inside the players inventory.
 def add_to_inventory(inventory, added_items):
     for loot in dragon_loot:
-        if loot not in inv:
-            inv[loot] = 1
-        else:
-            inv[loot] += 1
-
+        inv.setdefault(loot, 0)
+        inv[loot] += 1
 
 # Setting up a dictionary for a player and a list for loot
 inv = {'gold coin': 42, 'rope': 1}

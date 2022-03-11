@@ -22,7 +22,7 @@ def display_inventory(inventory):
 # to the value currently inside the players inventory.
 def add_to_inventory(inventory, added_items):
     for loot in dragon_loot:
-       inv.setdefault(loot, 1)
+       inv.setdefault(loot, 0)
        inv[loot] += 1
 
 
